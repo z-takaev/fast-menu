@@ -1,5 +1,5 @@
 <div class="bg-base-100 shadow-sm">
-    <div class="navbar mx-auto max-w-6xl">
+    <div class="navbar container">
         <div class="flex">
             <a class="btn btn-ghost text-xl">FastMenu</a>
         </div>
