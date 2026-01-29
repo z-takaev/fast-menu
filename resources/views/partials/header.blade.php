@@ -1,4 +1,4 @@
-<div class="bg-base-100 mb-10 shadow-sm">
+<div class="bg-base-100 fixed top-0 z-20 mb-10 w-full">
     <div class="navbar container">
         <div class="flex">
             <a href="#">
