@@ -1,7 +1,12 @@
 <div class="bg-base-100 mb-10 shadow-sm">
     <div class="navbar container">
         <div class="flex">
-            <a class="btn btn-ghost text-xl">FastMenu</a>
+            <a href="#">
+                <img
+                    src="{{ Vite::asset('resources/images/logo.svg') }}"
+                    alt=""
+                >
+            </a>
         </div>
 
         <div class="ms-auto flex">
@@ -13,7 +18,7 @@
         </div>
 
         <div class="ms-5 flex items-center">
-            <ul class="menu menu-horizontal px-1">
+            <ul class="menu menu-horizontal z-10 px-1">
                 <li>
                     <details>
                         <summary>RU</summary>
@@ -50,7 +55,7 @@
                     </div>
                 </div>
                 <div
-                    class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
+                    class="card card-compact dropdown-content bg-base-100 z-10 mt-3 w-52 shadow"
                     tabindex="0"
                 >
                     <div class="card-body">
