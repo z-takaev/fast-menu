@@ -66,6 +66,16 @@
         </div>
     </nav>
     <aside>
-        <p>FastMenu © {{ date('Y') }} - Все права защищены</p>
+        <p>
+            Создано с помощью
+
+            <a
+                href="#"
+                class="tooltip font-bold"
+                data-tip="сервис для создания и управления цифровыми меню"
+            >
+                FastMenu
+            </a>
+        </p>
     </aside>
 </footer>
