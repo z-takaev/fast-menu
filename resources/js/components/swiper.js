@@ -1,4 +1,4 @@
-export default function initSwiper() {
+export default function() {
     new Swiper('.swiper', {
         loop: true,
 
