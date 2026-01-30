@@ -1,69 +1,42 @@
-<div class="bg-base-100 fixed top-0 z-20 mb-10 w-full">
-    <div class="navbar container">
-        <div class="flex">
-            <a href="#">
+<header class="bg-base-100 fixed top-0 z-20 w-full shadow">
+    <div class="navbar container gap-4">
+        <div class="flex-none">
+            <a
+                href="{{ route('menu') }}"
+                class="block"
+                aria-label="На главную"
+            >
                 <img
+                    class="h-10 w-auto"
                     src="{{ Vite::asset('resources/images/logo.svg') }}"
-                    alt=""
+                    alt="Логотип {{ config('app.name') }}"
                 >
             </a>
         </div>
 
-        <div class="ms-auto flex">
-            <input
-                type="text"
-                class="input input-bordered w-3xs"
-                placeholder="Поиск по меню"
+        <div class="ms-8 flex-1">
+            <form
+                class="max-w-md"
+                action="#"
+                method="GET"
+            >
+                <input
+                    type="search"
+                    name="q"
+                    class="input input-bordered w-65"
+                    placeholder="Поиск по меню"
+                    aria-label="Поиск по меню"
+                />
+            </form>
+        </div>
+
+        <div class="flex flex-none items-center gap-2">
+            <x-language-switcher />
+
+            <x-cart-dropdown
+                :count="8"
+                :total="1000"
             />
         </div>
-
-        <div class="ms-5 flex items-center">
-            <ul class="menu menu-horizontal z-10 px-1">
-                <li>
-                    <details>
-                        <summary>RU</summary>
-                        <ul class="bg-base-100 rounded-t-none p-2">
-                            <li><a>RU</a></li>
-                            <li><a>EN</a></li>
-                        </ul>
-                    </details>
-                </li>
-            </ul>
-
-            <div class="dropdown dropdown-end">
-                <div
-                    class="btn btn-ghost btn-circle"
-                    tabindex="0"
-                    role="button"
-                >
-                    <div class="indicator">
-                        <svg
-                            class="h-5 w-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                            />
-                        </svg>
-                        <span class="badge badge-sm indicator-item">8</span>
-                    </div>
-                </div>
-                <div
-                    class="card card-compact dropdown-content bg-base-100 z-10 mt-3 w-52 shadow"
-                    tabindex="0"
-                >
-                    <div class="card-body">
-                        <span class="text-lg font-bold">8 товаров</span>
-                        <span class="text-info">Сумма: 1 000 руб.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
+</header>

@@ -1,4 +1,4 @@
-<div class="container relative pb-10">
+<div class="container relative mb-10">
     <div class="swiper banner">
         <div class="swiper-wrapper">
             <div class="swiper-slide">

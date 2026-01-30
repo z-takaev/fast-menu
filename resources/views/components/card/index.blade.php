@@ -1,10 +1,12 @@
 @props(['title', 'image', 'weight', 'price', 'isNew' => false, 'isHit' => false])
 
-<div class="card bg-base-100 max-w-80 shadow-sm">
+<div class="card bg-base-100 w-full shadow">
     <figure>
         <img
+            class="h-auto w-full"
             src="{{ $image }}"
             alt="{{ $title }}"
+            loading="lazy"
         />
     </figure>
     <div class="card-body">
@@ -21,8 +23,8 @@
         </h2>
 
         <div>
-            <div class="text-sm text-gray-500">{{ $weight }} г</div>
-            <div class="text-lg font-bold">{{ $price }}</div>
+            <div class="text-base-content/60 text-sm">{{ $weight }} г</div>
+            <div class="text-lg font-bold">{{ $price }} ₽</div>
         </div>
     </div>
 </div>
