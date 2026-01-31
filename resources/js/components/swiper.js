@@ -1,6 +1,15 @@
-export default function() {
-    new Swiper('.swiper', {
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import '../../css/swiper.css'
+
+export function initBannerSlider() {
+    new Swiper('.banner', {
         loop: true,
+
+          modules: [Navigation],
 
         navigation: {
             nextEl: '.swiper-button-next',

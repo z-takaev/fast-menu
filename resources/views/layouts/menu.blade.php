@@ -10,38 +10,38 @@
 
         <title>{{ config('app.name') }}</title>
 
-        <link
-            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-            rel="stylesheet"
-        />
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <meta
+            property="og:title"
+            content="{{ config('app.name') }}"
+        >
+        <meta
+            property="og:description"
+            content="{{ 'Описание организации' }}"
+        >
+        <meta
+            property="og:type"
+            content="website"
+        >
+        <meta
+            property="og:url"
+            content="{{ url()->current() }}"
+        >
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 
-    <body class="pt-[100px]">
-        @yield('content')
+    <body class="pt-24">
+        <x-header />
 
-        <button
-            id="scrollToTop"
-            class="invisible fixed bottom-8 right-8 rounded-full bg-blue-600 p-4 text-white opacity-0 shadow-lg transition-all duration-300 hover:bg-blue-700"
-            aria-label="Наверх"
-        >
-            <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 10l7-7m0 0l7 7m-7-7v18"
-                />
-            </svg>
-        </button>
+        <x-banner />
+
+        <main>
+            @yield('content')
+        </main>
+
+        <x-scroll-to-top />
+
+        <x-footer />
     </body>
 
 </html>

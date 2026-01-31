@@ -1,10 +1,6 @@
 @extends('layouts.menu')
 
 @section('content')
-    @include('partials.header')
-
-    @include('partials.slider')
-
     <div class="container py-8">
         <div class="flex items-start gap-10">
 
@@ -71,6 +67,4 @@
             </main>
         </div>
     </div>
-
-    @include('partials.footer')
 @endsection
