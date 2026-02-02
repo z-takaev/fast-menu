@@ -33,13 +33,11 @@
     <body class="pt-24">
         <x-header />
 
-        <x-banner />
-
         <main>
             @yield('content')
         </main>
 
-        <x-scroll-to-top />
+        <x-layout.scroll-to-top />
 
         <x-footer />
     </body>

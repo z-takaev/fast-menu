@@ -1,4 +1,4 @@
-@props(['count' => 0, 'total' => 0])
+@props(['count' => 0])
 
 <div class="dropdown dropdown-end">
     <button
